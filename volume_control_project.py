@@ -31,4 +31,10 @@ while True:
     
 
     cv2.imshow("Hand Gesture Volume Control", image)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
+
+    if key == 27:
+        break
+
+webcam.release()
+cv2.destroyAllWindows()
